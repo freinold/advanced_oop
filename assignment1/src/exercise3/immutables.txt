@@ -1,0 +1,10 @@
+All basic datatypes from java.lang :
+Boolean
+Byte
+Character
+Double
+Float
+Integer
+Long
+Short
+String
