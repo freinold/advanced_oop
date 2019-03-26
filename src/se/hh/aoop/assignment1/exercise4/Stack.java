@@ -24,7 +24,9 @@ public class Stack {
   }
 
   public int pop(int n) {
-    return this.stack
+    return 0;
   }
+
+
 
 }
