@@ -1,4 +1,4 @@
-package exercise2;
+package se.hh.aoop.assignment1.exercise2;
 
 import java.util.Arrays;
 
@@ -9,9 +9,9 @@ public class Matrix {
   private final int columns;
 
   public Matrix(int r, int c) {
-    rows = r;
-    columns = c;
-    elements = new double[rows][columns];
+    this.rows = r;
+    this.columns = c;
+    this.elements = new double[rows][columns];
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < columns; j++) {
         this.setElement(i, j, 0.0);
