@@ -38,11 +38,13 @@ public class MessageQueueImproved {
      *
      */
     public void add(Message message){
-        if(elements.length - 1 == count){ //array is full
+        if(elements.length  == count){ //array is full
             //copy data to new bigger array
+            tail = elements.length;
             Message[] newArray = new Message[elements.length + INITIAL_CAPACITY];
             System.arraycopy(elements, 0, newArray, 0, elements.length);
             elements = newArray;
+
         }
         elements[tail] = message;
         tail = (tail+1) % elements.length;

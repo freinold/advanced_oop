@@ -14,11 +14,11 @@ public class QueueTest {
     void sizeRemoveAddTest() {
         MessageQueueImproved queue = new MessageQueueImproved();
         assertEquals(queue.size(),0);
-        for(int i = 0; i < 256; i++) {
+        for(int i = 0; i < 64; i++) {
             queue.add(new Message("TestMessageNR"+ i));
         }
-        assertEquals(queue.size(),256);
-        for(int i = 0; i < 256; i++) {
+        assertEquals(queue.size(),64);
+        for(int i = 0; i < 64; i++) {
             assertEquals(queue.remove().getText(),"TestMessageNR"+ i);
 
         }
@@ -44,6 +44,21 @@ public class QueueTest {
 
 
     }
+    @Test
+    void basicSizeTest(){
+        MessageQueueImproved queue = new MessageQueueImproved();
+        for(int i = 0; i < 16; i++) {
+            queue.add(new Message("TestMessageNR"+ i));
+        }
+        assertEquals(queue.remove().getText(),"TestMessageNR0");
+        queue.add(new Message("TestMessageEND"));
+        for(int i = 1; i < 16; i++) {
+            assertEquals(queue.remove().getText(),"TestMessageNR"+ i);
+        }
+        assertEquals(queue.remove().getText(),"TestMessageEND");
+    }
+
+
 
 }
 
