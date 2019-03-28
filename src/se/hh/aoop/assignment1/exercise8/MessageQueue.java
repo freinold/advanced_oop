@@ -1,4 +1,4 @@
-package se.hh.aoop.assignment1.exercise7;
+package se.hh.aoop.assignment1.exercise8;
 
 import se.hh.aoop.assignment1.exercise5.Message;
 
