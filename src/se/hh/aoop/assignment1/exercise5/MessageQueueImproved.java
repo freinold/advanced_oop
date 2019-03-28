@@ -24,7 +24,7 @@ public class MessageQueueImproved {
      * @return the removed message
      * @precondition size() > 0
      */
-    public Message remove(){
+    public Message remove() {
         assert count > 0: "violated precondition size() > 0";
         Message toRemove = elements[head];
         head = (head +1) % elements.length;
