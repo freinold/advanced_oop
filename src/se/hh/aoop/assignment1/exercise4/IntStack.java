@@ -25,7 +25,7 @@ public class IntStack {
 
   public int[] pop(int n) {
     int[] values = new int[n];
-    for (int i = n - 1; i >=  0; i++) {
+    for (int i = n - 1; i >=  0; i--) {
       values[i] = stack.pop();
     }
     return values;
