@@ -40,7 +40,7 @@ public class MessageQueue {
      *
      * @param message the message to be added
      */
-    public void add(Message message) {
+     public void add(Message message) {
         if (elements.length == count) { //array is full
             //copy data to new bigger array
             tail = elements.length;
@@ -99,7 +99,7 @@ public class MessageQueue {
      * @param messages the messages to be added.
      * @precondition messages.length <= INITIAL_CAPACITY.
      */
-    public void add(Message... messages) {
+    public void multAdd(Message... messages) {
         assert messages.length <= INITIAL_CAPACITY : "violated precondition messages.length <= INITIAL_CAPACITY";
         for (Message message : messages) {
             this.add(message);
