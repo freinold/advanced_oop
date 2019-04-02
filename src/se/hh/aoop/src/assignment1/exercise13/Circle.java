@@ -1,7 +1,10 @@
 package se.hh.aoop.src.assignment1.exercise13;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.Icon;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
 
 public class Circle implements Icon {
@@ -13,6 +16,7 @@ public class Circle implements Icon {
         this.color = color;
         this.size = size;
     }
+
     @Override
     public void paintIcon(Component c, Graphics g, int x, int y) {
         Graphics2D g2 = (Graphics2D) g;
@@ -30,7 +34,9 @@ public class Circle implements Icon {
     public int getIconHeight() {
         return size;
     }
+
     public void setColor(Color color){
         this.color = color;
     }
+
 }
