@@ -9,7 +9,7 @@ public class MessageStack {
     private int size;
 
     public MessageStack(){
-        this.stack = new Stack<Message>();
+        this.stack = new Stack<>();
         this.size = 0;
     }
 
@@ -19,8 +19,9 @@ public class MessageStack {
     }
 
     public Message pop(){
-        this.size--;
-        return this.stack.pop();
+        this.size --;
+        Message m = this.stack.pop();
+        return m;
     }
 
     public void push (int n, Message[] m){
