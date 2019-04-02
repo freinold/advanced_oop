@@ -1,4 +1,4 @@
-package se.hh.aoop.assignment1.exercise2;
+package se.hh.aoop.src.assignment1.exercise2;
 
 import java.util.Arrays;
 

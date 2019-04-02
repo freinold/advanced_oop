@@ -1,4 +1,4 @@
-package se.hh.aoop.assignment1.exercise4;
+package se.hh.aoop.src.assignment1.exercise4;
 
 import java.util.Arrays;
 import java.util.Stack;

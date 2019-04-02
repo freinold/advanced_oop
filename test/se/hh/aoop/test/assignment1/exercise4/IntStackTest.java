@@ -3,7 +3,7 @@ package se.hh.aoop.test.assignment1.exercise4;
 import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import se.hh.aoop.assignment1.exercise4.IntStack;
+import se.hh.aoop.src.assignment1.exercise4.IntStack;
 
 public class IntStackTest {
 

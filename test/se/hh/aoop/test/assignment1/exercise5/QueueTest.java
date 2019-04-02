@@ -1,9 +1,9 @@
 package se.hh.aoop.test.assignment1.exercise5;
 
 import org.junit.jupiter.api.Test;
-import se.hh.aoop.assignment1.exercise5.Message;
+import se.hh.aoop.src.assignment1.exercise5.Message;
 
-import se.hh.aoop.assignment1.exercise5.MessageQueueImproved;
+import se.hh.aoop.src.assignment1.exercise5.MessageQueueImproved;
 
 import static org.junit.jupiter.api.Assertions.*;
 

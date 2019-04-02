@@ -1,4 +1,4 @@
-package se.hh.aoop.assignment1.exercise5;
+package se.hh.aoop.src.assignment1.exercise5;
 
 
 public class Message {

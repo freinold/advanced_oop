@@ -1,8 +1,8 @@
 package se.hh.aoop.test.assignment1.exercise8;
 
 import org.junit.jupiter.api.Test;
-import se.hh.aoop.assignment1.exercise5.Message;
-import se.hh.aoop.assignment1.exercise8.MessageQueue;
+import se.hh.aoop.src.assignment1.exercise5.Message;
+import se.hh.aoop.src.assignment1.exercise8.MessageQueue;
 
 public class MessageQueueTest {
 

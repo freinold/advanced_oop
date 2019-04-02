@@ -1,4 +1,4 @@
-package se.hh.aoop.assignment1.exercise11;
+package se.hh.aoop.src.assignment1.exercise11;
 
 import java.util.ArrayList;
 import java.util.Comparator;

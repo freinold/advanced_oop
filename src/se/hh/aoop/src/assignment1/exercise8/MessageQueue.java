@@ -1,6 +1,6 @@
-package se.hh.aoop.assignment1.exercise8;
+package se.hh.aoop.src.assignment1.exercise8;
 
-import se.hh.aoop.assignment1.exercise5.Message;
+import se.hh.aoop.src.assignment1.exercise5.Message;
 
 public class MessageQueue {
 

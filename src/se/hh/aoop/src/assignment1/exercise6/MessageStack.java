@@ -1,7 +1,7 @@
-package se.hh.aoop.assignment1.exercise6;
+package se.hh.aoop.src.assignment1.exercise6;
 
 import java.util.Stack;
-import se.hh.aoop.assignment1.exercise5.Message;
+import se.hh.aoop.src.assignment1.exercise5.Message;
 
 public class MessageStack {
 
