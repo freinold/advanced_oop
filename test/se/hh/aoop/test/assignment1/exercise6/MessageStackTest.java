@@ -2,8 +2,8 @@ package se.hh.aoop.test.assignment1.exercise6;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import se.hh.aoop.assignment1.exercise5.Message;
-import se.hh.aoop.assignment1.exercise6.MessageStack;
+import se.hh.aoop.src.assignment1.exercise5.Message;
+import se.hh.aoop.src.assignment1.exercise6.MessageStack;
 
 class MessageStackTest {
 
@@ -27,7 +27,7 @@ class MessageStackTest {
         }
         stack.push(64, m);
         assertEquals(stack.size(),64);
-        Message[] t = new Message[64];
+        Message[] t;
         t = stack.pop(64);
         for(int i = 0; i < 64; i++){
             assertEquals(m[i].getText(), t[i].getText());
