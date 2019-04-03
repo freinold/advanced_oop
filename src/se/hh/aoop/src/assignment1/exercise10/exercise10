@@ -1,0 +1,4 @@
+Polymorphism in this case allows you to compare objects that implements the Comparable type according to their own
+specific behaviour, still using the same compareTo() method. It simplifies the implementation for the user, that
+only needs to know one method, while the implementation of the method in each of the object's class specifies what needs
+to be compared.
