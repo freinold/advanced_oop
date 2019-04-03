@@ -2,7 +2,7 @@ package se.hh.aoop.test.assignment1.exercise12;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import se.hh.aoop.assignment1.exercise12.Filter;
+import se.hh.aoop.src.assignment1.exercise12.Filter;
 
 class FilterTest {
 
