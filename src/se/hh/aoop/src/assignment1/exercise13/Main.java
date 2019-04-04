@@ -19,13 +19,13 @@ public class Main {
         blueButton.addActionListener(e -> {
             circle.setColor(Color.blue);
             label.repaint();
-
         });
+
         redButton.addActionListener(e -> {
             circle.setColor(Color.red);
             label.repaint();
-
         });
+
         greenButton.addActionListener(e -> {
             circle.setColor(Color.green);
             label.repaint();
