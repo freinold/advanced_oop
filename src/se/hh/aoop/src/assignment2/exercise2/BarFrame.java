@@ -86,7 +86,7 @@ public class BarFrame extends JFrame implements ChangeListener, MouseListener
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
+//h
     }
 
     @Override
