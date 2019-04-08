@@ -60,7 +60,7 @@ public class BarFrame extends JFrame implements ChangeListener, MouseListener
                 }
             }
         };
-
+        addMouseListener(this);
         add(new JLabel(barIcon));
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -91,7 +91,21 @@ public class BarFrame extends JFrame implements ChangeListener, MouseListener
 
     @Override
     public void mousePressed(MouseEvent e) {
+        double max =  (a.get(0)).doubleValue();
+        double barHeight = ICON_HEIGHT / a.size();
+        for (Double v : a)
+        {
+            double val = v.doubleValue();
+            if (val > max)
+                max = val;
+        }
+        int x = e.getX();
+        int y = e.getY();
+        double newVal = x*max/ICON_WIDTH;
+        int index = (y-30) / (ICON_HEIGHT/a.size());
+        dataModel.update(index,newVal);
 
+        System.out.println("x:" +x +"y:"+y );
     }
 
     @Override

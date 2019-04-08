@@ -9,6 +9,7 @@ import java.awt.FlowLayout;
 public class Main {
 
     public static void main(String... args){
+
         JFrame frame = new JFrame();
         JButton redButton = new JButton("Red");
         JButton greenButton = new JButton("Green");

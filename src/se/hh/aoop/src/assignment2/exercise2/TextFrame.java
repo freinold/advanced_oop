@@ -3,20 +3,21 @@ package se.hh.aoop.src.assignment2.exercise2;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.util.ArrayList;
 
 /**
- A class for displaying the model as a column of textfields in a frame.
+ * A class for displaying the model as a column of textfields in a frame.
  */
-public class TextFrame extends JFrame
-{
+public class TextFrame extends JFrame implements ChangeListener {
     /**
-     Constructs a JFrame that contains the textfields containing the data
-     in the model.
-     @param d the model to display
+     * Constructs a JFrame that contains the textfields containing the data
+     * in the model.
+     *
+     * @param d the model to display
      */
-    public TextFrame(DataModel d)
-    {
+    public TextFrame(DataModel d) {
         dataModel = d;
 
         final Container contentPane = this.getContentPane();
@@ -26,10 +27,8 @@ public class TextFrame extends JFrame
         fieldList = new JTextField[a.size()];
 
         // A listener for action events in the text fields
-        ActionListener l = new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
-            {
+        ActionListener l = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
                 // Figure out which field generated the event
                 JTextField c = (JTextField) e.getSource();
                 int i = 0;
@@ -39,22 +38,18 @@ public class TextFrame extends JFrame
 
                 String text = c.getText().trim();
 
-                try
-                {
+                try {
                     double value = Double.parseDouble(text);
                     dataModel.update(i, value);
-                }
-                catch (Exception exc)
-                {
+                } catch (Exception exc) {
                     c.setText("Error.  No update");
                 }
             }
         };
 
         final int FIELD_WIDTH = 11;
-        for (int i = 0; i < a.size(); i++)
-        {
-            JTextField textField = new JTextField(a.get(i).toString(),FIELD_WIDTH);
+        for (int i = 0; i < a.size(); i++) {
+            JTextField textField = new JTextField(a.get(i).toString(), FIELD_WIDTH);
             textField.addActionListener(l);
             add(textField);
             fieldList[i] = textField;
@@ -67,4 +62,11 @@ public class TextFrame extends JFrame
 
     DataModel dataModel;
     JTextField[] fieldList;
+
+    @Override
+    public void stateChanged(ChangeEvent e) {
+        for (int i = 0; i < dataModel.getData().size(); i++) {
+            fieldList[i].setText(""+dataModel.getData().get(i));
+        }
+    }
 }
