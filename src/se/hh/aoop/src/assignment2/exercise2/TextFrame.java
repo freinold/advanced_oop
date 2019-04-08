@@ -66,7 +66,7 @@ public class TextFrame extends JFrame implements ChangeListener {
     @Override
     public void stateChanged(ChangeEvent e) {
         for (int i = 0; i < dataModel.getData().size(); i++) {
-            fieldList[i].setText(""+dataModel.getData().get(i));
+            fieldList[i].setText(String.format("%.6f",dataModel.getData().get(i)));
         }
     }
 }

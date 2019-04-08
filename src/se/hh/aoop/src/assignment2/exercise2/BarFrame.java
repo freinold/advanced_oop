@@ -9,36 +9,38 @@ import javax.swing.event.*;
 import java.util.*;
 
 /**
- A class that implements an Observer object that displays a barchart view of
- a data model.
+ * A class that implements an Observer object that displays a barchart view of
+ * a data model.
  */
-public class BarFrame extends JFrame implements ChangeListener, MouseListener
-{
+public class BarFrame extends JFrame implements ChangeListener, MouseListener {
     /**
-     Constructs a BarFrame object
-     @param dataModel the data that is displayed in the barchart
+     * Constructs a BarFrame object
+     *
+     * @param dataModel the data that is displayed in the barchart
      */
-    public BarFrame(DataModel dataModel)
-    {
+    public BarFrame(DataModel dataModel) {
         this.dataModel = dataModel;
         a = dataModel.getData();
 
-        setLocation(0,200);
+        setLocation(0, 200);
         setLayout(new BorderLayout());
 
-        Icon barIcon = new Icon()
-        {
-            public int getIconWidth() { return ICON_WIDTH; }
-            public int getIconHeight() { return ICON_HEIGHT; }
-            public void paintIcon(Component c, Graphics g, int x, int y)
-            {
+        Icon barIcon = new Icon() {
+            public int getIconWidth() {
+                return ICON_WIDTH;
+            }
+
+            public int getIconHeight() {
+                return ICON_HEIGHT;
+            }
+
+            public void paintIcon(Component c, Graphics g, int x, int y) {
                 Graphics2D g2 = (Graphics2D) g;
 
                 g2.setColor(Color.red);
 
-                double max =  (a.get(0)).doubleValue();
-                for (Double v : a)
-                {
+                double max = (a.get(0)).doubleValue();
+                for (Double v : a) {
                     double val = v.doubleValue();
                     if (val > max)
                         max = val;
@@ -47,8 +49,7 @@ public class BarFrame extends JFrame implements ChangeListener, MouseListener
                 double barHeight = getIconHeight() / a.size();
 
                 int i = 0;
-                for (Double v : a)
-                {
+                for (Double v : a) {
                     double value = v.doubleValue();
 
                     double barLength = getIconWidth() * value / max;
@@ -69,11 +70,11 @@ public class BarFrame extends JFrame implements ChangeListener, MouseListener
     }
 
     /**
-     Called when the data in the model is changed.
-     @param e the event representing the change
+     * Called when the data in the model is changed.
+     *
+     * @param e the event representing the change
      */
-    public void stateChanged(ChangeEvent e)
-    {
+    public void stateChanged(ChangeEvent e) {
         a = dataModel.getData();
         repaint();
     }
@@ -91,21 +92,22 @@ public class BarFrame extends JFrame implements ChangeListener, MouseListener
 
     @Override
     public void mousePressed(MouseEvent e) {
-        double max =  (a.get(0)).doubleValue();
+        double max = (a.get(0)).doubleValue();
         double barHeight = ICON_HEIGHT / a.size();
-        for (Double v : a)
-        {
+        for (Double v : a) {
             double val = v.doubleValue();
             if (val > max)
                 max = val;
         }
         int x = e.getX();
         int y = e.getY();
-        double newVal = x*max/ICON_WIDTH;
-        int index = (y-30) / (ICON_HEIGHT/a.size());
-        dataModel.update(index,newVal);
+        double newVal = x * max / ICON_WIDTH;
+        int index = (y - 30) / (ICON_HEIGHT / a.size());
+        if (index < dataModel.getData().size()) {
+            dataModel.update(index, newVal);
+        }
 
-        System.out.println("x:" +x +"y:"+y );
+        System.out.println("x:" + x + "y:" + y);
     }
 
     @Override
