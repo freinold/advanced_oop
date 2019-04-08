@@ -1,4 +1,4 @@
-All basic datatypes from java.lang :
+All wrappers for the basic datatypes from java.lang :
 Boolean
 Byte
 Character

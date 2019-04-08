@@ -1,6 +1,6 @@
 package se.hh.aoop.test.assignment1.exercise2;
 
-import se.hh.aoop.assignment1.exercise2.Matrix;
+import se.hh.aoop.src.assignment1.exercise2.Matrix;
 
 public class MatrixTest {
 
