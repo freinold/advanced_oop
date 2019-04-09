@@ -18,13 +18,9 @@ public class SignalWindow extends JFrame implements Observer {
 		setVisible(true);
 	}
 
-	public void updateSignal(double x) {
-
-	}
-
 	@Override
 	public void update(Observable o, Object arg) {
-		double val = (double) arg;
-		jta.append("" + String.format("%.6f", val) + "\n");
+		jta.append("" + String.format("%.6f", (double) arg) + "\n");
 	}
+
 }

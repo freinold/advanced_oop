@@ -7,9 +7,10 @@ public class StarObserver implements Observer {
 
 	@Override
 	public void update(Observable o, Object arg) {
-		int val = (int) arg;
-		for (int i = 0; i < val; i++)
+		double val = (double) arg;
+		for (int i = 0; i < (int) val; i++)
 			System.out.print("*");
 		System.out.println();
 	}
+
 }

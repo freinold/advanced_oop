@@ -9,11 +9,14 @@ import java.util.Observable;
 public class Signal extends Observable {
 
     private Sampler sampler;
-    private final int SAMPLING = 1000;
+    private final int SAMPLING = 100;
 
     public Signal() {
         sampler = new DefaultSampler();
-        Timer t = new Timer(SAMPLING, e -> notifyObservers(sampler.read()));
+        Timer t = new Timer(SAMPLING, e -> {
+            setChanged();
+            notifyObservers(sampler.read());
+        });
         t.start();
     }
 
