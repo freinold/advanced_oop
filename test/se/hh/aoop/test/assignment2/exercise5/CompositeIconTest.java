@@ -13,13 +13,12 @@ public class CompositeIconTest {
         RoundIcon circle = new RoundIcon(10);
         composite.addIcon(square, 10, 10);
         composite.addIcon(circle, 10, 40);
-        JOptionPane.showMessageDialog(
-                null,
-                "Basic Icon List",
-                "Hello",
-                JOptionPane.INFORMATION_MESSAGE,
-                composite);
-        System.exit(0);
-
+        JFrame frame = new JFrame("This is a composite icon list");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JLabel label = new JLabel(composite);
+        frame.getContentPane().add(label);
+        frame.setLocationRelativeTo(null);
+        frame.pack();
+        frame.setVisible(true);
     }
 }
