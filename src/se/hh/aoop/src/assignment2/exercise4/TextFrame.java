@@ -1,4 +1,4 @@
-package se.hh.aoop.src.assignment2.exercise2;
+package se.hh.aoop.src.assignment2.exercise4;
 
 import java.awt.*;
 import java.awt.event.*;

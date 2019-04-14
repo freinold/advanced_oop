@@ -1,4 +1,4 @@
-package se.hh.aoop.src.assignment2.exercise2;
+package se.hh.aoop.src.assignment2.exercise4;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -107,7 +107,7 @@ public class BarFrame extends JFrame implements ChangeListener, MouseListener {
             dataModel.update(index, newVal);
         }
 
-        System.out.println("x:" + x + "y:" + y);
+        //System.out.println("x:" + x + "y:" + y);
     }
 
     @Override

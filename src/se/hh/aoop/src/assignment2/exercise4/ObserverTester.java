@@ -1,8 +1,4 @@
-package se.hh.aoop.src.assignment2.exercise2;
-
-import se.hh.aoop.src.assignment2.exercise2.BarFrame;
-import se.hh.aoop.src.assignment2.exercise2.DataModel;
-import se.hh.aoop.src.assignment2.exercise2.TextFrame;
+package se.hh.aoop.src.assignment2.exercise4;
 
 import java.util.ArrayList;
 
