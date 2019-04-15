@@ -10,6 +10,7 @@ public class Sinus implements Sampler {
 		this.delta = delta;
 	}
 
+	@Override
 	public double read() {
 		double x = arg;
 		arg = arg + delta;
