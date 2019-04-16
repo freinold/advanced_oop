@@ -1,17 +1,15 @@
 package se.hh.aoop.src.assignment2.exercise9;
 
 import javax.swing.*;
-import java.applet.Applet;
-import java.awt.*;
 
-public abstract class Presenter extends Applet implements Action {
+public abstract class Presenter {
 
     private JFrame jFrame;
     private JTextArea jTextArea;
     private JButton northButton, southButton, eastButton, westButton;
     private JComponent centerComponent;
 
-    public Presenter() throws HeadlessException {
+    public Presenter() {
         super();
         jFrame = new JFrame();
         jTextArea = new JTextArea();
@@ -26,6 +24,10 @@ public abstract class Presenter extends Applet implements Action {
         jFrame.add(eastButton);
         jFrame.add(westButton);
         jFrame.add(jTextArea);
+        northButton.addActionListener(e -> northButtonPressed());
+        southButton.addActionListener(e -> southButtonPressed());
+        eastButton.addActionListener(e -> eastButtonPressed());
+        westButton.addActionListener(e -> westButtonPressed());
     }
 
     public abstract JComponent createCenterComponent();
