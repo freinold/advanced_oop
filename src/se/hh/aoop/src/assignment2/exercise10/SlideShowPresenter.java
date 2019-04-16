@@ -3,6 +3,7 @@ package se.hh.aoop.src.assignment2.exercise10;
 import se.hh.aoop.src.assignment2.exercise9.Presenter;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -33,6 +34,7 @@ public class SlideShowPresenter extends Presenter {
     @Override
     public JComponent createCenterComponent() {
         jLabel = new JLabel();
+        jLabel.setPreferredSize(new Dimension(400, 200));
         return jLabel;
     }
 
