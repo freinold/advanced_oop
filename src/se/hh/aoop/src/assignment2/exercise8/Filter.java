@@ -1,10 +1,16 @@
 package se.hh.aoop.src.assignment2.exercise8;
 
-public abstract class Filter {
+import java.util.ArrayList;
 
-    public abstract boolean accept(String x);
+public abstract class Filter<T> {
 
-    public boolean filter(String x){
-        return accept(x);
+    public abstract boolean accept(T x);
+
+    public ArrayList<T> filter(ArrayList<T> t){
+        ArrayList<T> result = new ArrayList<>();
+        for(T x : t){
+            if(accept(x)) result.add(x);
+        }
+        return result;
     }
 }
