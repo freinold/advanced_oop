@@ -6,6 +6,8 @@ import se.hh.aoop.src.assignment2.exercise8.FilterSize;
 
 import java.util.ArrayList;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class FilterTest {
 
     @Test
@@ -20,5 +22,6 @@ public class FilterTest {
         s.add("test");
         ArrayList<String> r = f.filter(s);
         System.out.println(r);
+        assertEquals(r.size(), 3);
     }
 }

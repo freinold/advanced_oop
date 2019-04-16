@@ -57,6 +57,7 @@ public class SlideShowPresenter extends Presenter {
     @Override
     public void westButtonPressed() {
         count = (count - 1) % pathList.size();
+        if(count < 0) count = pathList.size() - 1;
         reloadDisplay();
     }
 
