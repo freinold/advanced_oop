@@ -9,7 +9,7 @@ public class Leaf<T> implements Tree<T> {
 	}
 
 	public String toString() {
-		return  "[value = " + value + "]";
+		return  "Leaf: [value = " + value + " ]";
 	}
 
 	public <R,A> R accept(TreeVisitor<T, R, A> v,A val) {

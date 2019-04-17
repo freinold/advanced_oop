@@ -1,4 +1,6 @@
-package se.hh.aoop.src.assignment2.exercise12;
+package se.hh.aoop.test.assignment2.exercise12;
+
+import se.hh.aoop.src.assignment2.exercise12.*;
 
 import java.util.ArrayList;
 import java.util.List;
