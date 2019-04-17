@@ -15,7 +15,7 @@ public class TestVisitors {
 		List<Tree<String>> lst = new ArrayList<Tree<String>>();
 		lst.add(t1);
 		lst.add(t2);
-		//lst.add(t3);
+		lst.add(t3);
 		Tree<String> t = new Node<String>(lst);
 //		TreeVisitor<String,Integer> thv = new TreeHeightVisitor<String>();
 //		TreeVisitor<String,List<String>> llv = new ListLeavesVisitor<String>();
