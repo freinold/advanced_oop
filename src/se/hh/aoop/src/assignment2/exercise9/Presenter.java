@@ -1,31 +1,38 @@
 package se.hh.aoop.src.assignment2.exercise9;
 
 import javax.swing.*;
-import java.applet.Applet;
 import java.awt.*;
 
-public abstract class Presenter extends Applet implements Action {
+public abstract class Presenter {
 
     private JFrame jFrame;
     private JTextArea jTextArea;
     private JButton northButton, southButton, eastButton, westButton;
     private JComponent centerComponent;
 
-    public Presenter() throws HeadlessException {
-        super();
+    public Presenter() {
         jFrame = new JFrame();
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jFrame.getContentPane().setPreferredSize(new Dimension(400, 300));
         jTextArea = new JTextArea();
         northButton = new JButton("North");
         southButton = new JButton("South");
         eastButton = new JButton("East");
         westButton = new JButton("West");
         centerComponent = createCenterComponent();
-        jFrame.add(centerComponent);
-        jFrame.add(northButton);
-        jFrame.add(southButton);
-        jFrame.add(eastButton);
-        jFrame.add(westButton);
+        jFrame.setLayout(new FlowLayout());
+        jFrame.getContentPane().add(centerComponent);
+        jFrame.getContentPane().add(northButton);
+        jFrame.getContentPane().add(southButton);
+        jFrame.getContentPane().add(westButton);
+        jFrame.getContentPane().add(eastButton);
         jFrame.add(jTextArea);
+        northButton.addActionListener(e -> northButtonPressed());
+        southButton.addActionListener(e -> southButtonPressed());
+        eastButton.addActionListener(e -> eastButtonPressed());
+        westButton.addActionListener(e -> westButtonPressed());
+        jFrame.pack();
+        jFrame.setVisible(true);
     }
 
     public abstract JComponent createCenterComponent();

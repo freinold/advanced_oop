@@ -1,0 +1,3 @@
+test/se/hh/aoop/test/assignment2/exercise10/h2.jpg
+test/se/hh/aoop/test/assignment2/exercise10/h2.jpg
+test/se/hh/aoop/test/assignment2/exercise10/h3.jpg
