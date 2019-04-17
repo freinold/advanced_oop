@@ -18,6 +18,7 @@ public class SlideShowPresenter extends Presenter {
     private int count;
 
     public SlideShowPresenter(String picturePathFile, String descriptionFile) {
+        super();
         pathList = new ArrayList<>();
         descriptionList = new ArrayList<>();
         try (Stream<String> pstream = Files.lines(Paths.get(picturePathFile));
