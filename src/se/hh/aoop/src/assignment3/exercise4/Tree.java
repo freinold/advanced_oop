@@ -1,6 +1,4 @@
-package se.hh.aoop.src.assignment3;
-
-import java.lang.reflect.InvocationTargetException;
+package se.hh.aoop.src.assignment3.exercise4;
 
 @Element(name = "node")
 public class Tree<T> {
@@ -27,8 +25,13 @@ public class Tree<T> {
         return value;
     }
 
-    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
-        Tree<String> t = new Tree<String>("top", new Tree[]{new Tree("sub1"), new Tree("sub2")});
+    public static void main(String[] args) {
+        Tree<String> t =
+                new Tree<String>("top",
+                        new Tree[]{
+                                new Tree("sub1"),
+                                new Tree("sub2")
+                });
         Saver s = new Saver();
         String r = s.save(t);
         System.out.println(r);
